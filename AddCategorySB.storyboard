@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Wu3-Zn-9sy">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Add CategoryVC-->
+        <scene sceneID="ofa-8J-5in">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="Wu3-Zn-9sy" customClass="AddCategoryVC" customModule="Sync_Schedule" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Cvy-Ue-m40">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jMl-FH-aNy" customClass="PopUpView" customModule="Sync_Schedule" customModuleProvider="target">
+                                <rect key="frame" x="16" y="20" width="343" height="155"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sync-Category" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wlo-Mv-et3">
+                                        <rect key="frame" x="8" y="0.0" width="327" height="37"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="37" id="6Hc-jF-mxQ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Category Name" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Xzr-cT-cYd">
+                                        <rect key="frame" x="8" y="41" width="327" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="Ch9-tr-Gjk"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eo4-Oa-xPq" customClass="CustomButtons" customModule="Sync_Schedule" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="103" width="100" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="XWA-AD-WPc"/>
+                                            <constraint firstAttribute="height" constant="44" id="cLT-9E-0dU"/>
+                                        </constraints>
+                                        <state key="normal" image="unchecked"/>
+                                        <connections>
+                                            <action selector="closeBtnPressed:" destination="Wu3-Zn-9sy" eventType="touchUpInside" id="BHI-GH-3dw"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t4F-Qp-uLe" customClass="CustomButtons" customModule="Sync_Schedule" customModuleProvider="target">
+                                        <rect key="frame" x="235" y="103" width="100" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="FLy-aG-KYB"/>
+                                            <constraint firstAttribute="width" constant="100" id="mgP-qr-L21"/>
+                                        </constraints>
+                                        <state key="normal" image="checked"/>
+                                        <connections>
+                                            <action selector="saveActionBtn:" destination="Wu3-Zn-9sy" eventType="touchUpInside" id="f3J-ck-dwK"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Wlo-Mv-et3" secondAttribute="trailing" constant="8" id="0WW-Ni-Xdc"/>
+                                    <constraint firstAttribute="bottom" secondItem="Eo4-Oa-xPq" secondAttribute="bottom" constant="8" id="2QU-wz-y7e"/>
+                                    <constraint firstAttribute="height" constant="155" id="3HI-zH-JEh"/>
+                                    <constraint firstItem="Wlo-Mv-et3" firstAttribute="top" secondItem="jMl-FH-aNy" secondAttribute="top" id="Gww-a6-5YI"/>
+                                    <constraint firstAttribute="bottom" secondItem="t4F-Qp-uLe" secondAttribute="bottom" constant="8" id="RjL-QG-7Sk"/>
+                                    <constraint firstAttribute="trailing" secondItem="Xzr-cT-cYd" secondAttribute="trailing" constant="8" id="Sxg-YF-9Ap"/>
+                                    <constraint firstItem="Xzr-cT-cYd" firstAttribute="top" secondItem="Wlo-Mv-et3" secondAttribute="bottom" constant="4" id="eOt-IW-rYJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="t4F-Qp-uLe" secondAttribute="trailing" constant="8" id="gFD-5W-qXg"/>
+                                    <constraint firstItem="Wlo-Mv-et3" firstAttribute="leading" secondItem="jMl-FH-aNy" secondAttribute="leading" constant="8" id="nRf-ci-myK"/>
+                                    <constraint firstItem="Xzr-cT-cYd" firstAttribute="leading" secondItem="jMl-FH-aNy" secondAttribute="leading" constant="8" id="uZh-rH-dS3"/>
+                                    <constraint firstItem="Eo4-Oa-xPq" firstAttribute="leading" secondItem="jMl-FH-aNy" secondAttribute="leading" constant="8" id="x40-63-ERA"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jMl-FH-aNy" firstAttribute="top" secondItem="gNn-vU-ytD" secondAttribute="top" id="5EI-Ex-79R"/>
+                            <constraint firstItem="jMl-FH-aNy" firstAttribute="leading" secondItem="gNn-vU-ytD" secondAttribute="leading" constant="16" id="8VN-Hq-sVs"/>
+                            <constraint firstItem="jMl-FH-aNy" firstAttribute="centerX" secondItem="Cvy-Ue-m40" secondAttribute="centerX" id="DOy-QI-RJ8"/>
+                            <constraint firstItem="gNn-vU-ytD" firstAttribute="trailing" secondItem="jMl-FH-aNy" secondAttribute="trailing" constant="16" id="N3t-XD-Fjg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gNn-vU-ytD"/>
+                    </view>
+                    <connections>
+                        <outlet property="bgView" destination="Cvy-Ue-m40" id="3VF-ND-IIM"/>
+                        <outlet property="cancelBtn" destination="Eo4-Oa-xPq" id="Viz-qd-6CN"/>
+                        <outlet property="categoryTxtField" destination="Xzr-cT-cYd" id="qRh-H1-ae7"/>
+                        <outlet property="popUpView" destination="jMl-FH-aNy" id="bnS-pd-k2r"/>
+                        <outlet property="saveBtn" destination="t4F-Qp-uLe" id="ArL-Os-imW"/>
+                        <outlet property="titleLabel" destination="Wlo-Mv-et3" id="DxH-N4-MVw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JG7-Fx-0QD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="825" y="-110"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="checked" width="25" height="25"/>
+        <image name="unchecked" width="25" height="25"/>
+    </resources>
+</document>
